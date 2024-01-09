@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div id="content-box">
+    <h1>Love Calculator</h1>
+    <p>Enter your name and your crush's name to see the relationship chance!</p>
+    <br>
+
+    <label for="your-name">Your name: </label>
+    <input type="text" id="your-name" name="your-name"><br><br>
+
+    <label for="crush-name">Crush's Name: </label>
+    <input type="text" id="crush-name" name="crush-name"><br><br>
+
+    <button id="calculate">Calculate</button>
+    
+    <h2 id="result-message"></h2>
+    <p id="result-percentage"></p>
+</div>
+
+<script>
+    document.getElementById("calculate").addEventListener("click", function() {
+        var yourName = document.getElementById("your-name").value.toLowerCase();
+        var crushName = document.getElementById("crush-name").value.toLowerCase();
+
+        if (yourName === "specificname1" && crushName === "specificname2") {
+            document.getElementById("result-message").innerHTML = "Congratulations! Your love is 100% true";
+            document.getElementById("result-percentage").innerHTML = "";
+        } else {
+            document.getElementById("result-message").innerHTML = "Your love percentage is calculated based on your algorithm.";
+            document.getElementById("result-percentage").innerHTML = "";
+        }
+    });
+</script>
+
+</body>
+</html>
