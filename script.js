@@ -9,7 +9,11 @@ document.getElementById("calculate").addEventListener("click", function() {
     } else {
         // For other names, generate a random percentage
         var percentage = Math.floor(Math.random() * 101); // 0-100
+
+        // Display the love percentage
+        var percentageDisplay = (percentage === 100) ? "100%" : percentage + "%";
+        
         document.getElementById("result-message").innerHTML = "Your love percentage is calculated based on your algorithm.";
-        document.getElementById("result-percentage").innerHTML = "Love Percentage: " + percentage + "%";
+        document.getElementById("result-percentage").innerHTML = "Love Percentage: " + percentageDisplay;
     }
 });
