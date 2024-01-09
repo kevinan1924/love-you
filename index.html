@@ -31,7 +31,8 @@
         var yourName = document.getElementById("your-name").value.toLowerCase();
         var crushName = document.getElementById("crush-name").value.toLowerCase();
 
-        if (yourName === "Yilun" && crushName === "Yechan") {
+        // Changed the condition to check both combinations of names
+        if ((yourName === "yilun" && crushName === "yechan") || (yourName === "yechan" && crushName === "yilun")) {
             document.getElementById("result-message").innerHTML = "Congratulations! Your love is 100% true";
             document.getElementById("result-percentage").innerHTML = "";
         } else {
@@ -40,6 +41,7 @@
         }
     });
 </script>
+
 
 </body>
 </html>
