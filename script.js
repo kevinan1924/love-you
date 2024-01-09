@@ -1,19 +1,22 @@
-
-
 window.onload = function() {
     let button = document.getElementById("calculate");
     button.addEventListener("click", calculateLove);
 }
 
 function calculateLove() {
-    let yourName = document.getElementById("your-name").value;
-    let crushName = document.getElementById("crush-name").value;
+    let yourName = document.getElementById("your-name").value.toLowerCase();  // Convert to lowercase for case-insensitive comparison
+    let crushName = document.getElementById("crush-name").value.toLowerCase();
 
     if (yourName != "" && crushName != "") {
-        let percentage = Math.floor(Math.random() * 101); //0-.99999
-        // percentage = 3;
-        
-        document.getElementById("result-message").innerText = yourName + " and " + crushName + "'s chance of love:";
-        document.getElementById("result-percentage").innerText = percentage.toString() + "%";
+        // Check for the specific names "Yilun" and "Yechan"
+        if ((yourName === "yilun" && crushName === "yechan") || (yourName === "yechan" && crushName === "yilun")) {
+            document.getElementById("result-message").innerText = "Congratulations! Your love is 100% true";
+            document.getElementById("result-percentage").innerText = "";
+        } else {
+            // If names are not "Yilun" and "Yechan", generate a random percentage
+            let percentage = Math.floor(Math.random() * 101); // 0-100
+            document.getElementById("result-message").innerText = yourName + " and " + crushName + "'s chance of love:";
+            document.getElementById("result-percentage").innerText = percentage.toString() + "%";
+        }
     }
 }
