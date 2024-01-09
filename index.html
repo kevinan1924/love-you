@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
@@ -26,22 +25,6 @@
     <p id="result-percentage"></p>
 </div>
 
-<script>
-    document.getElementById("calculate").addEventListener("click", function() {
-        var yourName = document.getElementById("your-name").value.toLowerCase();
-        var crushName = document.getElementById("crush-name").value.toLowerCase();
-
-        // Changed the condition to check both combinations of names
-        if ((yourName === "yilun" && crushName === "yechan") || (yourName === "yechan" && crushName === "yilun")) {
-            document.getElementById("result-message").innerHTML = "Congratulations! Your love is 100% true";
-            document.getElementById("result-percentage").innerHTML = "";
-        } else {
-            document.getElementById("result-message").innerHTML = "Your love percentage is calculated based on your algorithm.";
-            document.getElementById("result-percentage").innerHTML = "";
-        }
-    });
-</script>
-
-
+<script src="script.js"></script>
 </body>
 </html>
